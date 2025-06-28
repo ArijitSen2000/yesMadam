@@ -3,6 +3,7 @@ import { ActivityIndicator, Animated, FlatList, Modal, SafeAreaView, StyleSheet,
 import { useDispatch, useSelector } from "react-redux";
 import { ALL_PRODUCTS } from "../../uritlity/productsData";
 import { logout } from "../../redux/authSlice";
+import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -188,9 +189,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    height: 100,
+    height: verticalScale(100),
     backgroundColor: '#6200ee',
-    paddingHorizontal: 15,
+    paddingHorizontal: scale(15),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -199,31 +200,31 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 10,
-    paddingTop: 40
+    paddingTop: verticalScale(40),
   },
   headerTitle: {
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: 'bold',
     color: '#fff',
   },
   headerButton: {
-    padding: 8,
-    borderRadius: 4,
+    padding: scale(8),
+    borderRadius: scale(4),
     backgroundColor: 'rgba(255,255,255,0.2)',
-    minWidth: 60,
+    minWidth: scale(60),
     alignItems: 'center',
   },
   headerButtonText: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: moderateScale(14),
   },
   listContent: {
-    paddingTop: 70,
-    paddingBottom: 20,
-    paddingHorizontal: 8,
+    paddingTop: verticalScale(70),
+    paddingBottom: verticalScale(20),
+    paddingHorizontal: scale(8),
   },
   itemContainer: {
-    padding: 5,
+    padding: scale(5),
   },
   singleColumnItem: {
     width: '100%',
@@ -233,43 +234,43 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: '#fff',
-    borderRadius: 8,
+    borderRadius: scale(8),
     overflow: 'hidden',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: verticalScale(2) },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
+    shadowRadius: scale(4),
     elevation: 2,
-    height: 300,
+    height: verticalScale(300),
   },
   productImage: {
     width: '100%',
-    height: 150,
+    height: verticalScale(150),
     backgroundColor: '#f0f0f0',
   },
   productInfo: {
-    padding: 10,
+    padding: scale(10),
   },
   title: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: verticalScale(5),
   },
   price: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
     color: '#6200ee',
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: verticalScale(5),
   },
   description: {
-    fontSize: 12,
+    fontSize: moderateScale(12),
     color: '#666',
   },
   selectedItem: {
     backgroundColor: '#e3f2fd',
   },
   footer: {
-    padding: 12,
+    padding: scale(12),
     borderTopWidth: 1,
     borderColor: '#ccc',
     backgroundColor: '#fff',
@@ -278,19 +279,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   totalText: {
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: 'bold',
   },
   viewAllButton: {
     backgroundColor: '#6200ee',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 4,
+    paddingVertical: verticalScale(8),
+    paddingHorizontal: scale(12),
+    borderRadius: scale(4),
   },
   viewAllButtonText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: moderateScale(14),
   },
   modalContainer: {
     flex: 1,
@@ -300,56 +301,56 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     backgroundColor: '#fff',
-    padding: 15,
-    borderRadius: 10,
+    padding: scale(15),
+    borderRadius: scale(10),
     width: '90%',
     maxHeight: '80%',
   },
   modalTitle: {
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: 'bold',
-    marginBottom: 15,
+    marginBottom: verticalScale(15),
     textAlign: 'center',
   },
   modalItem: {
-    padding: 10,
+    padding: scale(10),
     borderBottomWidth: 1,
     borderColor: '#eee',
     flexDirection: 'row',
     alignItems: 'center',
   },
   modalImage: {
-    width: 50,
-    height: 50,
-    marginRight: 10,
+    width: scale(50),
+    height: scale(50),
+    marginRight: scale(10),
   },
   modalItemText: {
     flex: 1,
   },
   modalItemTitle: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
   },
   modalItemPrice: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: 'bold',
     color: '#6200ee',
   },
   modalTotal: {
-    padding: 10,
+    padding: scale(10),
     borderTopWidth: 1,
     borderColor: '#eee',
-    marginTop: 10,
+    marginTop: verticalScale(10),
   },
   modalTotalText: {
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: 'bold',
     textAlign: 'right',
   },
   closeButton: {
     backgroundColor: '#6200ee',
-    padding: 12,
-    borderRadius: 4,
-    marginTop: 10,
+    padding: scale(12),
+    borderRadius: scale(4),
+    marginTop: verticalScale(10),
   },
   closeButtonText: {
     color: '#fff',
@@ -357,18 +358,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   loadingContainer: {
-    padding: 20,
+    padding: scale(20),
     alignItems: 'center',
   },
   loadMoreButton: {
     backgroundColor: '#6200ee',
-    padding: 12,
-    borderRadius: 4,
-    margin: 15,
+    padding: scale(12),
+    borderRadius: scale(4),
+    margin: scale(15),
     alignItems: 'center',
   },
   loadMoreText: {
     color: '#fff',
     fontWeight: 'bold',
+    fontSize: moderateScale(14),
   },
 });
+
