@@ -45,4 +45,4 @@ const SignupScreen = ({ navigation }: any) => {
       borderRadius: 5
     }
   });
-  cl
+  
