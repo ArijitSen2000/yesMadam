@@ -6,7 +6,7 @@ import { logout } from "../../redux/authSlice";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 const HomeScreen = () => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const [products, setProducts] = useState<any[]>([]);
   const [viewMode, setViewMode] = useState<'single' | 'double'>('single');
   const [page, setPage] = useState(1);
